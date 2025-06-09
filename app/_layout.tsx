@@ -1,10 +1,10 @@
+import { Text, View } from 'react-native';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import '../global.css'
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -19,11 +19,17 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <View className='bg-light-background dark:bg-dark-background'>
+        <Text
+          className='mt-10 text-3xl font-bold text-light-text dark:text-dark-text'
+        >
+          Hola Mundo
+        </Text>
+      </View>
+      {/*
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
+        */}
     </ThemeProvider>
   );
 }
