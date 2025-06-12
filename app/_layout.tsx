@@ -1,8 +1,4 @@
 import {
-  Text,
-  View
-} from 'react-native';
-import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider
@@ -12,10 +8,9 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Stack } from 'expo-router';
 import 'react-native-reanimated';
 
+import { allRoutes } from '@/constants/Routes';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { ThemedView, ThemedText } from '@/presentation/shared';
-import { allRoutes } from '@/constants/Routes';
 import '../global.css'
 
 export default function RootLayout() {

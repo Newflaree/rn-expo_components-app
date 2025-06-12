@@ -14,7 +14,6 @@ interface Props extends TextProps {
 
 const ThemedText = ({ className, type, ...rest }: Props) => {
   return (
-    // className='mt-10 text-3xl font-bold text-light-text dark:text-dark-text'
     <Text
       className={[
         'text-light-text dark:text-dark-text',
@@ -25,7 +24,6 @@ const ThemedText = ({ className, type, ...rest }: Props) => {
         type === 'link' ? 'font-normal underline' : undefined,
         className
       ].join( ' ' )}
-
       { ...rest }
     />
   );

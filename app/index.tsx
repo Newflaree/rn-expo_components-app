@@ -1,10 +1,11 @@
 // React Native
-import { 
-  View,
-  Text
-} from 'react-native';
-import { Href, Link } from 'expo-router';
-import { animationMenuRoutes, uiMenuRoutes, menuRoutes } from '@/constants/Routes';
+import { View } from 'react-native';
+
+import {
+  animationMenuRoutes,
+  uiMenuRoutes,
+  menuRoutes
+} from '@/constants/Routes';
 import { MenuItem } from '@/presentation/menu';
 import { ThemedView } from '@/presentation/shared';
 

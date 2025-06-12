@@ -2,7 +2,6 @@
 import { 
   View,
   ViewProps,
-  Text
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useThemeColor } from '@/hooks/useThemeColor';
@@ -27,7 +26,6 @@ const ThemedView = ({
   const safeArea = useSafeAreaInsets();
 
   return (
-    //className='bg-light-background dark:bg-dark-background'
     <View
       style={[
         {
