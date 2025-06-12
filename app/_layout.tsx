@@ -13,7 +13,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { ThemedView } from '@/presentation/shared';
+import { ThemedView, ThemedText } from '@/presentation/shared';
 import '../global.css'
 
 export default function RootLayout() {
@@ -32,11 +32,9 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <ThemedView margin>
-          <Text
-            className='mt-10 text-3xl font-bold text-light-text dark:text-dark-text'
-          >
+          <ThemedText className='mt-20' type='h1'>
             Hola Mundo
-          </Text>
+          </ThemedText>
         </ThemedView>
       </ThemeProvider>
       {/*
