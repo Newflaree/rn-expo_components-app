@@ -6,10 +6,12 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-import '../global.css';
-import {Text, View} from 'react-native';
 import {useThemeColor} from '@/hooks/use-theme-color';
 import {ThemedView} from '@/presentation/shared/ThemedView';
+import {ThemedText} from '@/presentation/shared/ThemedText';
+
+import '../global.css';
+
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -23,7 +25,7 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <ThemedView margin>
-          <Text className='mt-10 text-3xl text-light-primary dark:text-dark-primary'> Hola Mundo</Text>
+          <ThemedText className='mt-20'>Hola Mundo</ThemedText>
         </ThemedView>
         { /*
           <Stack>
