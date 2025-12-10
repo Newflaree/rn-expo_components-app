@@ -5,6 +5,9 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
+import '../global.css';
+import {Text, View} from 'react-native';
+
 export const unstable_settings = {
   anchor: '(tabs)',
 };
@@ -14,11 +17,13 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+      <View className='flex-1 bg-light-background dark:bg-dark-background'>
+        <Text className='mt-10 text-3xl text-light-primary dark:text-dark-primary'> Hola Mundo</Text>
+      </View>
+      { /*
+        <Stack>
       </Stack>
-      <StatusBar style="auto" />
+       */ }
     </ThemeProvider>
   );
 }
